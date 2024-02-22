@@ -20,9 +20,13 @@ def invalido() :
     main()
 
 def cadastro_restaurante() :
-    os.system('cls')
+    os.system('clear')
     print('Cadastro de novos Restaurantes\n')
     nome = input('Informe o nome do restaurante: ')
+    restaurantes.append(nome)
+    print(f'O restaurante {nome} foi cadastrado com sucesso')
+    input('Digite uma tecla para voltar ao menu principal')
+    main()
 
 def escolher_opcao() :
     try:
@@ -42,12 +46,12 @@ def escolher_opcao() :
         invalido()
 
 def finalizar_app() :
-    os.system('cls')
+    os.system('clear')
     print('Encerrando APP\n')
 
 
 def main() :
-    os.system('cls')
+    os.system('clear')
     init()
     opcoes()
     escolher_opcao()
